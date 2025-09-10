@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "4e8e9c95-9632-40f6-88e7-03c4b3b24b20",
+		"name": "Microservice_",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17700119"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "super-simple-edge-key"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"uk@uk.com\",\n    \"name\":\"kc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/users",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"users"
+					]
+				},
+				"description": "Generated from cURL: curl -s -X POST http://localhost:3000/users\n-H 'content-type: application/json' -H 'x-api-key: super-simple-edge-\nkey'\n-d '{\"email\":\"a@b.com\",\"name\":\"Alice\"}'"
+			},
+			"response": []
+		},
+		{
+			"name": "GET user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "super-simple-edge-key"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"kc@uk.com\",\n    \"name\":\"kc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/users",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"users"
+					]
+				},
+				"description": "Generated from cURL: curl -s -X POST http://localhost:3000/users\n-H 'content-type: application/json' -H 'x-api-key: super-simple-edge-\nkey'\n-d '{\"email\":\"a@b.com\",\"name\":\"Alice\"}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "super-simple-edge-key"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Book\",\n    \"price\":199.0,\n    \"stock\":5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/products",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"products"
+					]
+				},
+				"description": "Generated from cURL: curl -s -X POST http://localhost:3000/products\n-H 'content-type: application/json' -H 'x-api-key: super-simple-edge-\nkey'\n-d '{\"name\":\"Book\",\"price\":199.0,\"stock\":5}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Create order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "super-simple-edge-key"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"68c155e05a7e9d54c80a11f0\",\n    \"productId\":\"68c155e812077f1f5950f6c6\",\n    \"qty\":1\n}\n\n\n/*\n{\n    \"userId\":\"<USER_ID>\",\n    \"productId\":\"<PRODUCT_ID>\",\n    \"qty\":2\n}\n*/",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/orders",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"orders"
+					]
+				},
+				"description": "Generated from cURL: curl -s -X POST http://localhost:3000/orders\n-H 'content-type: application/json' -H 'x-api-key: super-simple-edge-\nkey'\n-d '{\"userId\":\"<USER_ID>\",\"productId\":\"<PRODUCT_ID>\",\"qty\":2}'"
+			},
+			"response": []
+		},
+		{
+			"name": "get order",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "super-simple-edge-key"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/orders/68c17e8d68d7b437ed348fa2",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"orders",
+						"68c17e8d68d7b437ed348fa2"
+					]
+				},
+				"description": "Generated from cURL: curl -s http://localhost:3000/orders/<ORDER_ID> -H 'x-api-key: super-simple-\nedge-key'"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
